@@ -1,96 +1,106 @@
 <h1>Prueba</h1>
 
-<button
-  (click)="op.toggle($event)"
-  pButton
-  pRipple
-  type="button"
-  icon="pi pi-user"
-  label="historial de pagos"
-  class="p-button-rounded p-button-info p-button-outlined mt-5 ml-5 mr-5" 
-></button>
+<div>
+  <h4>tipo 1</h4>
+  <button
+    (click)="op.show($event)"
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-user"
+    label="historial de pagos"
+    class="p-button-rounded p-button-info p-button-outlined mt-5 ml-5 mr-5"
+  ></button>
 
-<p-overlayPanel #op appendTo="body" [dismissable]="false">
-  <ng-template pTemplate>
-    <div class="p-grid">
-      <div class="col-12 d-flex p-ai-start p-jc-end">
+  <p-overlayPanel #op [dismissable]="false">
+    <ng-template pTemplate>
+      <div class="p-grid">
+        <div class="col-12 d-flex p-ai-start p-jc-end">
+          <button
+            pButton
+            pRipple
+            type="button"
+            (click)="op.hide()"
+            icon="pi pi-times"
+            class="p-button-sm p-button-rounded p-button-secondary button-close"
+          ></button>
+        </div>
+      </div>
+      <form (ngSubmit)="authUser()">
+        <div class="grid flex flex-column">
+          <div class="col-12 md-12 input-form">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText placeholder="E-mail" />
+            </div>
+          </div>
+
+          <div class="col-12 md-12 input-form">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+              <input
+                type="text"
+                pInputText
+                placeholder="cedula de ciudadania"
+              />
+            </div>
+          </div>
+        </div>
         <button
           pButton
           pRipple
-          type="button"
-          (click)="op.hide()"
-          icon="pi pi-times"
-          class="p-button-sm p-button-rounded p-button-secondary button-close"
+          type="submit"
+          label="Ingresar"
+          class="p-button-raised p-button-danger p-button-sm p-mr-1"
         ></button>
-      </div>
-    </div>
-    <form (ngSubmit)="authUser()">
-      <div class="grid flex flex-column">
-        <div class="col-12 md-12 input-form">
-          <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-            <input type="text" pInputText placeholder="E-mail" autofocus />
+      </form>
+    </ng-template>
+  </p-overlayPanel>
+</div>
+
+<div>
+  <h4>tipo 2</h4>
+  <button
+    (click)="op2.hide()"
+    pButton
+    pRipple
+    type="button"
+    autofocus
+    icon="pi pi-user"
+    label="historial de pagos"
+    class="p-button-rounded p-button-info p-button-outlined mt-5"
+  ></button>
+  <p-overlayPanel #op2 [dismissable]="true">
+    <ng-template pTemplate>
+      <form (ngSubmit)="authUsers()">
+        <div class="grid flex flex-column">
+          <div class="col-12 md-12 input-form">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText placeholder="E-mail" />
+            </div>
+          </div>
+
+          <div class="col-12 md-12 input-form">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+              <input
+                type="text"
+                pInputText
+                placeholder="cedula de ciudadania"
+              />
+            </div>
           </div>
         </div>
-
-        <div class="col-12 md-12 input-form">
-          <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-            <input type="text" pInputText placeholder="cedula de ciudadania" autofocus />
-          </div>
-        </div>
-      </div>
-      <button
-        pButton
-        pRipple
-        type="submit"
-        label="Ingresar"
-        class="p-button-raised p-button-danger p-button-sm p-mr-1"
-      ></button>
-    </form>
-  </ng-template>
-</p-overlayPanel>
-
-
-
-
-
-<button 
-  (click)="op2.hide()"
-  pButton
-  pRipple
-  type="button"
-  autofocus
-  icon="pi pi-user"
-  label="historial de pagos"
-  class="p-button-rounded p-button-info p-button-outlined mt-5"
-></button>
-<p-overlayPanel #op2 appendTo="body">
-  <ng-template pTemplate>
-    <form (ngSubmit)="authUser()">
-      <div class="grid flex flex-column">
-        <div class="col-12 md-12 input-form">
-          <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-            <input type="text" pInputText placeholder="E-mail" autofocus />
-          </div>
-        </div>
-
-        <div class="col-12 md-12 input-form">
-          <div class="p-inputgroup">
-            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-            <input type="text" pInputText placeholder="cedula de ciudadania" autofocus />
-          </div>
-        </div>
-      </div>
-      <button
-        pButton
-        autofocus
-        pRipple
-        type="submit"
-        label="Ingresar"
-        class="p-button-raised p-button-danger p-button-sm p-mr-1"
-      ></button>
-    </form>
-  </ng-template>
-</p-overlayPanel>
+        <button
+          pButton
+          autofocus
+          pRipple
+          type="submit"
+          label="Ingresar"
+          class="p-button-raised p-button-danger p-button-sm p-mr-1"
+        ></button>
+      </form>
+    </ng-template>
+  </p-overlayPanel>
+</div>
