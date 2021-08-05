@@ -1,68 +1,4 @@
-<h1>Prueba</h1>
-
-<div>
-  <h4>tipo 1</h4>
-  <button
-    (click)="op.show($event)"
-    pButton
-    pRipple
-    type="button"
-    icon="pi pi-user"
-    label="historial de pagos"
-    class="p-button-rounded p-button-info p-button-outlined mt-5 ml-5 mr-5"
-  ></button>
-
-  <p-overlayPanel #op [dismissable]="false">
-    <ng-template pTemplate>
-      <div class="p-grid">
-        <div class="col-12 d-flex p-ai-start p-jc-end">
-          <button
-            pButton
-            pRipple
-            type="button"
-            (click)="op.hide()"
-            icon="pi pi-times"
-            class="p-button-sm p-button-rounded p-button-secondary button-close"
-          ></button>
-        </div>
-      </div>
-      <form (ngSubmit)="authUser()">
-        <div class="grid flex flex-column">
-          <div class="col-12 md-12 input-form">
-            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-            <input type="text" pInputText placeholder="E-mail" />
-          </div>
-
-          <div class="col-12 md-12 input-form">
-            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-            <input type="text" pInputText placeholder="cedula de ciudadania" />
-          </div>
-          <div class="col-12 md-12 input-form">
-            <input type="text" pInputText />
-            <span class="p-ml-2">label</span>
-          </div>
-
-          <span class="p-input-icon-left">
-            <i class="pi pi-search"></i>
-            <input type="text" pInputText placeholder="Search"/>
-        </span>
-
-        <span class="p-input-icon-left">
-          <i class="pi pi-search"></i>
-          <input type="text" placeholder="Search"/>
-      </span>
-        </div>
-        <button
-          pButton
-          pRipple
-          type="submit"
-          label="Ingresar"
-          class="p-button-raised p-button-danger p-button-sm p-mr-1"
-        ></button>
-      </form>
-    </ng-template>
-  </p-overlayPanel>
-</div>
+<h1>Prueba dialog</h1>
 
 <div>
   <h4>tipo 2</h4>
@@ -109,4 +45,50 @@
       </form>
     </ng-template>
   </p-overlayPanel>
+</div>
+
+
+<div>
+  <h4>tipo 2</h4>
+  <button
+    (click)="showDialog()"
+    pButton
+    pRipple
+    type="button"
+    autofocus
+    icon="pi pi-user"
+    label="historial de pagos"
+    class="p-button-rounded p-button-info p-button-outlined mt-5"
+  ></button>
+  <p-dialog header="Title" [(visible)]="display">
+    <form (ngSubmit)="authUser()">
+      <div class="grid flex flex-column">
+        <div class="col-12 md-12 input-form">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" pInputText placeholder="E-mail" />
+          </div>
+        </div>
+        <div class="col-12 md-12 input-form">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+            <input
+              type="text"
+              pInputText
+              placeholder="cedula de ciudadania"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        pButton
+        autofocus
+        pRipple
+        type="submit"
+        label="Ingresar"
+        class="p-button-raised p-button-danger p-button-sm p-mr-1"
+      ></button>
+    </form>
+  </p-dialog>
+
 </div>

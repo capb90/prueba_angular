@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prueba';
-
+  display: boolean = false;
   authUsers(){}
   authUser(){}
+
+
+  showDialog() {
+    this.display = true;
+}
 }
