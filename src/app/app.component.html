@@ -10,7 +10,7 @@
   class="p-button-rounded p-button-info p-button-outlined mt-5 ml-5 mr-5" 
 ></button>
 
-<p-overlayPanel #op [dismissable]="false">
+<p-overlayPanel #op appendTo="body" [dismissable]="false">
   <ng-template pTemplate>
     <div class="p-grid">
       <div class="col-12 d-flex p-ai-start p-jc-end">
@@ -56,7 +56,7 @@
 
 
 <button 
-  (click)="op2.toggle($event)"
+  (click)="op2.hide()"
   pButton
   pRipple
   type="button"
@@ -65,7 +65,7 @@
   label="historial de pagos"
   class="p-button-rounded p-button-info p-button-outlined mt-5"
 ></button>
-<p-overlayPanel #op2>
+<p-overlayPanel #op2 appendTo="body">
   <ng-template pTemplate>
     <form (ngSubmit)="authUser()">
       <div class="grid flex flex-column">
