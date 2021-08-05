@@ -29,21 +29,17 @@
       <form (ngSubmit)="authUser()">
         <div class="grid flex flex-column">
           <div class="col-12 md-12 input-form">
-            <div class="p-inputgroup">
-              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <input type="text" pInputText placeholder="E-mail" />
-            </div>
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" pInputText placeholder="E-mail" />
           </div>
 
           <div class="col-12 md-12 input-form">
-            <div class="p-inputgroup">
-              <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-              <input
-                type="text"
-                pInputText
-                placeholder="cedula de ciudadania"
-              />
-            </div>
+            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+            <input type="text" pInputText placeholder="cedula de ciudadania" />
+          </div>
+          <div class="col-12 md-12 input-form">
+            <input type="text" pInputText />
+            <span class="p-ml-2">label</span>
           </div>
         </div>
         <button
