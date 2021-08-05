@@ -1,0 +1,59 @@
+.transacction-history{
+    background-color: white ;
+}
+
+.bg-black {
+    min-height: 93vh;
+    justify-content: center;
+    background-color: white ;
+
+}
+
+.question{
+    color: #000;;
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    line-height: 66px;
+    font-family: 'Montserrat';
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.question-smart{
+    color: #ffb612;;
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+    line-height: 66px;
+    font-family: 'Montserrat';
+    text-align:center;
+    text-transform: uppercase;
+}
+
+.box{
+    text-align: center;
+}
+
+.text-aff{
+    color: #ffb612;
+    font-size: 50px;
+    font-family: 'Montserrat';
+    
+}
+
+.text-neg{
+    color: #000;
+    font-size: 50px;
+    font-family: 'Montserrat';
+}
+
+.button-close {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 5px;
+}
