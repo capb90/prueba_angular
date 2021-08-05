@@ -47,7 +47,6 @@
   </p-overlayPanel>
 </div>
 
-
 <div>
   <h4>tipo 2</h4>
   <button
@@ -60,7 +59,15 @@
     label="historial de pagos"
     class="p-button-rounded p-button-info p-button-outlined mt-5"
   ></button>
-  <p-dialog header="Title" [(visible)]="display">
+  <p-dialog
+    [modal]="true"
+    header="historial_pagos"
+    [breakpoints]="{ '1024px': '75vw', '640px': '100vw' }"
+    position="left"
+    [style]="{ width: '20vw' }"
+    [draggable]="false"
+    [(visible)]="display"
+  >
     <form (ngSubmit)="authUser()">
       <div class="grid flex flex-column">
         <div class="col-12 md-12 input-form">
@@ -72,11 +79,7 @@
         <div class="col-12 md-12 input-form">
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
-            <input
-              type="text"
-              pInputText
-              placeholder="cedula de ciudadania"
-            />
+            <input type="text" pInputText placeholder="cedula de ciudadania" />
           </div>
         </div>
       </div>
@@ -90,5 +93,4 @@
       ></button>
     </form>
   </p-dialog>
-
 </div>
