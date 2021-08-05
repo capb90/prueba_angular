@@ -41,6 +41,16 @@
             <input type="text" pInputText />
             <span class="p-ml-2">label</span>
           </div>
+
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Search"/>
+        </span>
+
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input type="text" placeholder="Search"/>
+      </span>
         </div>
         <button
           pButton
@@ -66,7 +76,7 @@
     label="historial de pagos"
     class="p-button-rounded p-button-info p-button-outlined mt-5"
   ></button>
-  <p-overlayPanel #op2 [dismissable]="true">
+  <p-overlayPanel #op2 [dismissable]="true" [focusOnShow]="false">
     <ng-template pTemplate>
       <form (ngSubmit)="authUsers()">
         <div class="grid flex flex-column">
